@@ -1,4 +1,4 @@
-import { HelloWorld, BookList, AddBook } from "./components";
+import { Title, BookList, AddBook } from "./components";
 import { createSignal, createEffect } from "solid-js";
 import { Show } from "solid-js";
 
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="flex flex-col items-center gap-3 p-4">
-      <HelloWorld name="Harshal Walunj's" />
+      <Title name="Harshal Walunj's" />
       <AddBook
         setBooks={setBooks}
         showBooks={showBooks()}
