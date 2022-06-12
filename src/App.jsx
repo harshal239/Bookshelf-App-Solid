@@ -24,12 +24,19 @@ function App() {
       <Title name="Harshal Walunj's" />
       <AddBook
         setBooks={setBooks}
-        showBooks={showBooks()}
-        toggleShowBooks={toggleShowBooks}
+        // showBooks={showBooks()}
+        // toggleShowBooks={toggleShowBooks}
       />
       <Show
         when={showBooks()}
-        fallback={<div className="text-xl">Books are hidden</div>}
+        fallback={
+          <button
+            className="text-xl font-semibold text-blue-800"
+            onClick={toggleShowBooks}
+          >
+            Show All Books
+          </button>
+        }
       >
         <BookList books={books()} />
       </Show>
